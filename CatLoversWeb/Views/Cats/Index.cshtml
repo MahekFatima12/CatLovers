@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CatLoversWeb.Models.Cat>
+
+@{
+    ViewData["Title"] = "Cats";
+}
+
+<h2 class="mb-4">🐾 Our Lovely Cats</h2>
+
+<div class="row">
+    @foreach (var cat in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="@cat.ImageUrl"
+                     class="card-img-top"
+                     alt="@cat.Name"
+                     style="height:380px; object-fit:cover;" />
+
+
+                <div class="card-body">
+                    <h5 class="card-title">@cat.Name</h5>
+                    <p class="card-text">
+                        <strong>Breed:</strong> @cat.Breed <br />
+                        <strong>Age:</strong> @cat.Age years
+                    </p>
+                </div>
+
+                <div class="card-footer bg-white border-0 d-flex justify-content-between">
+                    <a asp-action="Details" asp-route-id="@cat.Id" class="btn btn-outline-primary btn-sm">
+                        View
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@cat.Id" class="btn btn-outline-secondary btn-sm">
+                        Edit
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
