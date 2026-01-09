@@ -17,22 +17,23 @@
                      style="height:380px; object-fit:cover;" />
 
 
-                <div class="card-body">
-                    <h5 class="card-title">@cat.Name</h5>
-                    <p class="card-text">
-                        <strong>Breed:</strong> @cat.Breed <br />
-                        <strong>Age:</strong> @cat.Age years
-                    </p>
-                </div>
-
                 <div class="card-footer bg-white border-0 d-flex justify-content-between">
-                    <a asp-action="Details" asp-route-id="@cat.Id" class="btn btn-outline-primary btn-sm">
+                    <a asp-controller="Cats"
+                       asp-action="Details"
+                       asp-route-id="@cat.Id"
+                       class="btn btn-outline-primary btn-sm">
                         View
                     </a>
-                    <a asp-action="Edit" asp-route-id="@cat.Id" class="btn btn-outline-secondary btn-sm">
+
+                    <a asp-controller="Cats"
+                       asp-action="Edit"
+                       asp-route-id="@cat.Id"
+                       class="btn btn-outline-secondary btn-sm">
                         Edit
                     </a>
+
                 </div>
+
             </div>
         </div>
     }
