@@ -12,8 +12,11 @@ namespace CatLoversWeb.Controllers
             return new List<Cat>
             {
                 new Cat { Id = 1, Name = "Luna", Breed = "Persian", Age = 2, ImageUrl = "/images/Cat1.png" },
-                new Cat { Id = 2, Name = "Milo", Breed = "Bengal", Age = 3, ImageUrl = "/images/Cat2.png" },
-                new Cat { Id = 3, Name = "Oliver", Breed = "Siamese", Age = 4, ImageUrl = "/images/Cat3.png" }
+        new Cat { Id = 2, Name = "Milo", Breed = "Bengal", Age = 3, ImageUrl = "/images/Cat2.png" },
+        new Cat { Id = 3, Name = "Oliver", Breed = "Siamese", Age = 4, ImageUrl = "/images/Cat3.png" },
+        new Cat { Id = 4, Name = "Kitty", Breed = "American", Age = 2, ImageUrl = "/images/Cat4.png" },
+        new Cat { Id = 5, Name = "Bella", Breed = "Indian", Age = 3, ImageUrl = "/images/Cat5.png" },
+        new Cat { Id = 6, Name = "Pussa", Breed = "British", Age = 3, ImageUrl = "/images/Cat6.png" }
             };
         }
 
