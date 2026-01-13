@@ -8,7 +8,13 @@ namespace CatLoversWeb.Controllers
         {
             return View();
         }
+
+        public IActionResult About()
+        {
+            return View();
+        }
     }
 }
+
 
 //Initial commit//
