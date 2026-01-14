@@ -1,4 +1,4 @@
-﻿@{
+﻿@* @{
     ViewData["Title"] = "Home";
 }
 
@@ -7,4 +7,75 @@
     <p class="lead">
         Discover lovely cats and their details.
     </p>
+</div> *@
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- HERO SECTION -->
+<div class="bg-light py-5 text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">
+            Welcome to CatLovers 🐱
+        </h1>
+        <p class="lead text-muted mt-3">
+            Discover lovely cats, explore breeds, and manage cat profiles
+            with a clean and modern web experience.
+        </p>
+
+        <!-- CTA BUTTONS -->
+        <div class="mt-4">
+            <a asp-controller="Cats" asp-action="Index"
+               class="btn btn-primary btn-lg me-2">
+                View Cats
+            </a>
+
+            <a asp-controller="Cats" asp-action="Create"
+               class="btn btn-outline-secondary btn-lg">
+                Add New Cat
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- FEATURES SECTION -->
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">🐾 Browse Cats</h5>
+                    <p class="card-text">
+                        View a curated list of cats with detailed
+                        information and profiles.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">✏️ Manage Profiles</h5>
+                    <p class="card-text">
+                        Add, edit, and update cat details
+                        using simple MVC forms.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">⚙️ Built with MVC</h5>
+                    <p class="card-text">
+                        Developed using ASP.NET Core MVC,
+                        Razor Views, and Bootstrap.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
