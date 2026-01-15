@@ -7,5 +7,9 @@
         public string Breed { get; set; } = string.Empty;
         public int Age { get; set; }
         public string ImageUrl { get; set; }
+        // Pricing
+        public decimal Price { get; set; }
+        public decimal? DiscountPrice { get; set; }  // optional
+        public bool IsAvailable { get; set; }         // In Stock / Reserved
     }
 }
