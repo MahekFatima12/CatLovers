@@ -52,31 +52,36 @@
                     }
 
                     <!-- AVAILABILITY -->
-                    @if (cat.IsAvailable)
+                    @* @if (cat.IsAvailable)
                     {
                         <span class="badge bg-success">In Stock</span>
                     }
                     else
                     {
                         <span class="badge bg-danger">Reserved</span>
-                    }
-                </div>
+                    } *@
+                </div> 
 
-                <div class="card-footer bg-white border-0 d-flex justify-content-between">
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                        @if (cat.IsAvailable)
+                        {
+                            <span class="badge bg-success">In Stock</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Reserved</span>
+                        }
+                    </div>
+
                     <a asp-controller="Cats"
                        asp-action="Details"
                        asp-route-id="@cat.Id"
                        class="btn btn-outline-primary btn-sm">
-                        View
-                    </a>
-
-                    <a asp-controller="Cats"
-                       asp-action="Edit"
-                       asp-route-id="@cat.Id"
-                       class="btn btn-outline-secondary btn-sm">
-                        Edit
+                        View Details
                     </a>
                 </div>
+
 
             </div>
         </div>

@@ -25,7 +25,7 @@
         </p>
 
         <!-- CTA BUTTONS -->
-        <div class="mt-4">
+      @*   <div class="mt-4">
             <a asp-controller="Cats" asp-action="Index"
                class="btn btn-primary btn-lg me-2">
                 View Cats
@@ -35,7 +35,7 @@
                class="btn btn-outline-secondary btn-lg">
                 Add New Cat
             </a>
-        </div>
+        </div> *@
     </div>
 </div>
 
@@ -65,7 +65,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-md-4">
             <div class="card shadow-sm mb-4">
                 <div class="card-body">
@@ -75,7 +74,117 @@
                         Razor Views, and Bootstrap.
                     </p>
                 </div>
+
             </div>
         </div>
+        <!-- FEATURED CATS -->
+        <div class="container mt-5">
+            <h3 class="text-center mb-4">🌟 Featured Cats</h3>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="/images/Cat1.png"
+                             class="card-img-top"
+                             style="height:300px; object-fit:cover;" />
+                        <div class="card-body text-center">
+                            <h5>Luna</h5>
+                            <p class="text-success fw-bold">$999</p>
+                            <a asp-controller="Cats"
+                               asp-action="Index"
+                               class="btn btn-sm btn-outline-primary">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="/images/Cat4.png"
+                             class="card-img-top"
+                             style="height:300px; object-fit:cover;" />
+                        <div class="card-body text-center">
+                            <h5>Kitty</h5>
+                            <p class="text-success fw-bold">$550</p>
+                            <a asp-controller="Cats"
+                               asp-action="Index"
+                               class="btn btn-sm btn-outline-primary">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="/images/Cat6.png"
+                             class="card-img-top"
+                             style="height:300px; object-fit:cover;" />
+                        <div class="card-body text-center">
+                            <h5>Pussa</h5>
+                            <p class="text-success fw-bold">$1200</p>
+                            <a asp-controller="Cats"
+                               asp-action="Index"
+                               class="btn btn-sm btn-outline-primary">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WHY CHOOSE US -->
+        <div class="bg-light py-5 mt-5">
+            <div class="container">
+                <h3 class="text-center mb-4">🐾 Why Choose CatLovers?</h3>
+
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <h5>Healthy Cats</h5>
+                        <p class="text-muted">
+                            Vet-checked and well cared for
+                        </p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5>Verified Breeds</h5>
+                        <p class="text-muted">
+                            Trusted and certified cat breeds
+                        </p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5>Transparent Pricing</h5>
+                        <p class="text-muted">
+                            No hidden costs, honest pricing
+                        </p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5>Easy Purchase</h5>
+                        <p class="text-muted">
+                            Simple and fast adoption process
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+<!-- FINAL CTA -->
+<div class="container my-5">
+    <div class="text-center p-5 bg-white shadow-sm rounded">
+        <h3>Ready to find your perfect companion? 🐱</h3>
+        <p class="text-muted mb-4">
+            Browse our lovely cats and bring happiness home today.
+        </p>
+        <a asp-controller="Cats"
+           asp-action="Index"
+           class="btn btn-primary btn-lg px-4">
+            Browse All Cats
+        </a>
     </div>
 </div>

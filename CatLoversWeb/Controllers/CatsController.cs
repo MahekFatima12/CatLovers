@@ -13,12 +13,27 @@ namespace CatLoversWeb.Controllers
             var cats = GetCats();
             return View(cats);
         }
+        // ✅ DETAILS ACTION (THIS WAS MISSING)
+        public IActionResult Details(int id)
+        {
+            var cat = GetCats().FirstOrDefault(c => c.Id == id);
+
+            if (cat == null)
+            {
+                return NotFound();
+            }
+            if (!cat.IsAvailable)
+            {
+                return BadRequest("This cat is already reserved.");
+            }
+            return View(cat);
+        }
 
         // ✅ OPTIONAL TEST (you can delete later)
-        public IActionResult Test()
-        {
-            return Content("Cats controller is working ✅");
-        }
+        //public IActionResult Test()
+        //{
+        //    return Content("Cats controller is working ✅");
+        //}
 
         // ❌ NOT an action (correctly private)
         private List<Cat> GetCats()
@@ -90,7 +105,52 @@ namespace CatLoversWeb.Controllers
                     Price = 1400m,
                     DiscountPrice = 1200m,
                     IsAvailable = false
-                }
+                },
+                new Cat
+{
+    Id = 7,
+    Name = "Shadow",
+    Breed = "Russian Blue",
+    Age = 2,
+    ImageUrl = "/images/Cat7.png",
+    Price = 900m,
+    DiscountPrice = null,
+    IsAvailable = true
+},
+new Cat
+{
+    Id = 8,
+    Name = "Simba",
+    Breed = "Maine Coon",
+    Age = 4,
+    ImageUrl = "/images/Cat8.png",
+    Price = 1800m,
+    DiscountPrice = 1600m,
+    IsAvailable = true
+},
+new Cat
+{
+    Id = 9,
+    Name = "Cleo",
+    Breed = "Egyptian Mau",
+    Age = 3,
+    ImageUrl = "/images/Cat9.png",
+    Price = 1100m,
+    DiscountPrice = null,
+    IsAvailable = false
+},
+new Cat
+{
+    Id = 10,
+    Name = "Leo",
+    Breed = "Abyssinian",
+    Age = 2,
+    ImageUrl = "/images/Cat10.png",
+    Price = 950m,
+    DiscountPrice = 850m,
+    IsAvailable = true
+}
+
             };
         }
     }
