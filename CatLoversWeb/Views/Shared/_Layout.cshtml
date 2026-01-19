@@ -61,6 +61,12 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Careers" asp-action="Index">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Contact" asp-action="Index">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -83,5 +89,23 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+    <a href="https://wa.me/7738214690"
+       target="_blank"
+       title="Chat on WhatsApp"
+       style="
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background-color: #25D366;
+     color: white;
+     padding: 14px 16px;
+     border-radius: 50%;
+     font-size: 24px;
+     text-decoration: none;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+     z-index: 1000;
+   ">
+        💬
+    </a>
 </body>
 </html>
