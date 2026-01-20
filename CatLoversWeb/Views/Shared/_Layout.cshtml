@@ -36,6 +36,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CatLoversWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
     <header>
@@ -67,6 +69,42 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Contact" asp-action="Index">Contact</a>
                         </li>
+                        @* AUTH LINKS *@
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <span class="nav-link text-light">
+                                    Hello @User.Identity.Name
+                                </span>
+                            </li>
+                            <li class="nav-item">
+                                <form asp-area="Identity"
+                                      asp-page="/Account/Logout"
+                                      method="post"
+                                      class="d-inline">
+                                    <button type="submit" class="nav-link btn btn-link text-light">
+                                        Logout
+                                    </button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-area="Identity"
+                                   asp-page="/Account/Login">
+                                    Login
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-area="Identity"
+                                   asp-page="/Account/Register">
+                                    Register
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -89,7 +127,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
-    <a href="https://wa.me/7738214690"
+    <a href="https://wa.me/9503229131?text=Hello%20CatLovers!%20I%20am%20interested%20in%20adoption."
        target="_blank"
        title="Chat on WhatsApp"
        style="
@@ -103,9 +141,8 @@
      font-size: 24px;
      text-decoration: none;
      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-     z-index: 1000;
-   ">
-        💬
+     z-index: 1000;">
+        <i class="fab fa-whatsapp"></i>
     </a>
 </body>
 </html>

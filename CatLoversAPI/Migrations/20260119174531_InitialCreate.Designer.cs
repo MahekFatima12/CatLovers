@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CatLoversAPI.Migrations
 {
     [DbContext(typeof(CatDbContext))]
-    [Migration("20251223102409_InitialCreate")]
+    [Migration("20260119174531_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

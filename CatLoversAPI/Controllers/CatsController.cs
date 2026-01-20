@@ -90,8 +90,16 @@ namespace CatLoversAPI.Controllers
         // Shared in-memory list (acts like a fake database for now)
         private static List<Cat> cats = new List<Cat>
         {
-            new Cat { Id = 1, Name = "Milo", Age = 2, Breed = "Persian" },
-            new Cat { Id = 2, Name = "Luna", Age = 3, Breed = "Siamese" }
+            new Cat { Id = 1, Name = "Luna", Age = 3, Breed = "Persian" },
+    new Cat { Id = 2, Name = "Milo", Age = 3, Breed = "Bengal" },
+    new Cat { Id = 3, Name = "Oliver", Age = 4, Breed = "Siamese" },
+    new Cat { Id = 4, Name = "Kitty", Age = 2, Breed = "American Shorthair" },
+    new Cat { Id = 5, Name = "Bella", Age = 3, Breed = "Indian" },
+    new Cat { Id = 6, Name = "Pussa", Age = 3, Breed = "British Shorthair" },
+    new Cat { Id = 7, Name = "Shadow", Age = 2, Breed = "Russian Blue" },
+    new Cat { Id = 8, Name = "Simba", Age = 4, Breed = "Maine Coon" },
+    new Cat { Id = 9, Name = "Cleo", Age = 3, Breed = "Egyptian Mau" },
+    new Cat { Id = 10, Name = "Leo", Age = 2, Breed = "Abyssinian" }
         };
 
         // GET: api/Cats
